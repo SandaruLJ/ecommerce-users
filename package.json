@@ -1,5 +1,5 @@
 {
-  "name": "ecommerce-backend",
+  "name": "ecommerce-users",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/server.js",
@@ -28,7 +28,6 @@
   "devDependencies": {
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
-    "@types/mongoose": "^5.11.97",
     "@types/multer": "^1.4.7",
     "@types/node": "^16.4.10",
     "nodemon": "^2.0.12",
