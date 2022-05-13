@@ -1,0 +1,30 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ctse
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-management-deployment
+  namespace: ctse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-management
+  template:
+    metadata:
+      labels:
+        app: user-management
+    spec:
+      containers:
+        - name: user-management
+          image: it19140544/ecommerce-users:latest
+          ports:
+            - containerPort: 3002
+          envFrom:
+            - configMapRef:
+                name: user-management-config
+---
