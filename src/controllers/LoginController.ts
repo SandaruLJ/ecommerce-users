@@ -27,7 +27,7 @@ export default class LoginController {
         if (req.body && req.body.email) {
             const email = req.body.email;
             const password = req.body.password ? req.body.password : '';
-            const type = req.body.type ? req.body.type : 'customer';
+            const type = req.body.type ? req.body.type : 'user';
 
             await this.loginService.getLogin(email, type)
                 .then(data => {

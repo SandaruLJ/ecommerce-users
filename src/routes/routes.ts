@@ -22,5 +22,5 @@ export default function setRoutes(app:any){
   router.route('/users/change-password/:id').put(userControl.updateUserPassword);
   
   // Login Routes
-  router.route('/auth/login').post(loginControl.authenticate);
+  router.route('/users/login').post(loginControl.authenticate);
 }
